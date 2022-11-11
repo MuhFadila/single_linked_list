@@ -56,6 +56,9 @@ namespace single_linked_list
                 previous = current;
                 current = current.next;
             }
+            //*once the above for loop is executed prev and current are positioned in a such manner that the position for the new node*/
+            newnode = current;
+            previous.next = newnode;
         }
     }
 }
