@@ -139,7 +139,26 @@ namespace single_linked_list
                     Console.WriteLine("5. EXIT");
                     Console.Write("\nEnter your choice (1-5) : ");
                     char ch = Convert.ToChar(Console.ReadLine());
-                    switch (ch) { }
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                obj.addNote();
+                            }
+                            break;
+                        case '2':
+                            {
+                                if (obj.listEmpty())
+                                {
+                                    Console.WriteLine("\nList is Empty");
+                                    break;
+                                }
+                                Console.Write("\nEnter the roll number of" +
+                                    "the student whose record is to be deleted :");
+                                Console.WriteLine("\nList is empty");
+                                break;
+                            }
+                    }
                 }
             }
             
