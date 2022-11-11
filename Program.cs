@@ -2,11 +2,13 @@
 
 namespace single_linked_list
 {
-    class Program
+    // each node consist of the information part and lik to thr next mod
+
+    class Node
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        public int rollNumber;
+        public string name;
+        public Node next;
     }
+    
 }
