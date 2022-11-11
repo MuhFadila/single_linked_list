@@ -113,4 +113,16 @@ namespace single_linked_list
                 return false;
         }
     }
+    class Program
+    {
+        //check wheter the specified node is present in the list or not
+        static void Main(string[] args)
+        {
+            List obj = new List();
+            while (true)
+            {
+
+            }
+        }
+    }
 }
