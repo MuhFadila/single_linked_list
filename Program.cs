@@ -46,7 +46,16 @@ namespace single_linked_list
             previous = START;
             current = START;
 
-            while ((current != null) && (nim >= current.rollNumber)) { }
+            while ((current != null) && (nim >= current.rollNumber))
+            {
+                if (nim == current.rollNumber)
+                {
+                    Console.WriteLine("\nDuplicate roll numbers not allowed\n");
+                    return;
+                }
+                previous = current;
+                current = current.next;
+            }
         }
     }
 }
