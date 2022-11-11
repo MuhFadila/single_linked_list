@@ -203,9 +203,11 @@ namespace single_linked_list
                       {
                         Console.WriteLine("\nInvalid Option");
                         break;
-                    }
-                }
-            
+                      }
+                    
+            }
+            catch (Exception)
         }
+                Console.WriteLine("\nCheck for the value enterd ");
     }
 }
