@@ -60,5 +60,57 @@ namespace single_linked_list
             newnode = current;
             previous.next = newnode;
         }
+        public void traverse()
+        {
+            if (listEmpty())
+            {
+                Console.WriteLine("\nList is empty.\n");
+            }
+            else
+            {
+                Console.WriteLine("\nThe records in the list are :  ");
+                Node currentNode;
+                for (currentNode = START; currentNode != null;
+                    currentNode = currentNode.next)
+
+                    Console.Write(currentNode.rollNumber + " " + currentNode.name + " \n ");
+
+                Console.WriteLine();
+            }
+        }
+        public bool delNode(int nim)
+        {
+            Node previous, current;
+            previous = current = null;
+            //check if the spesified node is present in the list or not
+            if (Search(nim, ref previous, ref current) == false)
+                return false;
+            previous.next = current.next;
+            if (current == START)
+                START = START.next;
+            return true;
+        }
+        public bool Search(int nim, ref Node previous, ref Node current)
+        {
+            previous = START;
+            current = current.next;
+
+            while ((current != null) && (nim != current.rollNumber))
+            {
+                previous = current;
+                current = current.next;
+            }
+            if (current == null )
+                return (false);
+            else
+                return (true);
+        }
+        public bool listEmpty()
+        {
+            if (START == null)
+                return true;
+            else
+                return false;
+        }
     }
 }
